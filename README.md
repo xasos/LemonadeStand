@@ -1,7 +1,7 @@
 LemonadeStand
 =============
 
-Lemonade Stand Game for iOS
+Lemonade Stand Game for iOS built in Swift.
 
 ### Screenshots:
 <img src="https://raw.githubusercontent.com/xasos/LemonadeStand/master/Screenshots/screen2.png?token=AF8kkNKdudvU5k7EJgtA5j9cZbIHogggks5Ul0WlwA%3D%3D" height="667" width="375">
