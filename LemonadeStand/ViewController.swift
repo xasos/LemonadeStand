@@ -28,8 +28,14 @@ class ViewController: UIViewController {
     var lemonsToMix = 0
     var iceCubesToMix = 0
     
+    var weatherArray: [[Int]] = [[-10, -8, -5, -7], [5, 8, 10, 9], [22, 25, 27, 23]]
+    
+    var weatherToday: [Int] = [0, 0, 0, 0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        simulateWeatherToday()
         
         updateMainView()
     }
@@ -141,7 +147,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startDayButtonPressed(sender: AnyObject) {
-        let customers  = Int(arc4random_uniform(UInt32(11)))
+        
+        let average = findAverage(weatherToday)
+        
+        let customers  = Int(arc4random_uniform(UInt32(average)))
         println("customers: \(customers)")
         
         let lemonadeRatio = Float(lemonsToMix) / Float(iceCubesToMix)
@@ -167,6 +176,15 @@ class ViewController: UIViewController {
                 println("no match, no revenue")
             }
         }
+        
+        lemonsToPurchase = 0
+        iceCubesToPurchase = 0
+        lemonsToMix = 0
+        iceCubesToMix = 0
+        
+        simulateWeatherToday()
+        
+        updateMainView()
     }
     
     func updateMainView() {
@@ -185,6 +203,25 @@ class ViewController: UIViewController {
         var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func simulateWeatherToday() {
+        let index = Int(arc4random_uniform((UInt32(weatherArray.count))))
+        
+        weatherToday = weatherArray[index]
+    }
+    
+    func findAverage(data:[Int]) -> Int {
+        var sum = 0
+        
+        for x in data {
+            sum += x
+        }
+        
+        var average: Double = Double(sum) / Double(data.count)
+        var rounded: Int = Int(ceil(average))
+        
+        return rounded
     }
     
 }
