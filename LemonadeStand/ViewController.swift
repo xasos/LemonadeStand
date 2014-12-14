@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  LemonadeStand
 //
-//  Created by Niraj  on 12/14/14.
+//  Created by Niraj Pant on 12/14/14.
 //  Copyright (c) 2014 Niraj Pant. All rights reserved.
 //
 
@@ -21,15 +21,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var lemonMixCount: UILabel!
     @IBOutlet weak var iceCubeMixCount: UILabel!
     
+    var supplies = Supplies(aMoney: 10, aLemons: 1, aIceCubes: 1)
+    var price = Price()
+    
+    var lemonsToPurchase = 0
+    var iceCubesToPurchase = 0
+    var lemonsToMix = 0
+    var iceCubesToMix = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func purchaseLemonButtonPressed(sender: AnyObject) {
@@ -41,7 +46,7 @@ class ViewController: UIViewController {
     @IBAction func unpurchaseLemonButtonPressed(sender: AnyObject) {
     }
     
-    @IBAction func unPurchaseIceCubeButtonPressed(sender: AnyObject) {
+    @IBAction func unpurchaseIceCubeButtonPressed(sender: AnyObject) {
     }
     
     @IBAction func mixLemonButtonPressed(sender: AnyObject) {
@@ -57,6 +62,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startDayButtonPressed(sender: AnyObject) {
+    }
+    
+    func updateNameView() {
+        moneySupplyCount.text = "$\(supplies.money)"
+        lemonSupplyCount.text = "\(supplies.lemons)"
+        iceCubeSupplyCount.text = "\(supplies.iceCubes)"
+        
+        lemonPurchaseCount.text = "\(lemonsToPurchase)"
+        iceCubePurchaseCount.text = "\(iceCubesToPurchase)"
+        
+        lemonMixCount.text = "\(lemonsToMix)"
+        iceCubeMixCount.text = "\(iceCubesToMix)"
+    }
+    
+    func showAlertWithText(header: String = "Warning", message: String) {
+        var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
 }

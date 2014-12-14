@@ -13,6 +13,8 @@
 		EB8A0F1F1A3D6624007709EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8A0F1E1A3D6624007709EB /* Images.xcassets */; };
 		EB8A0F221A3D6624007709EB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB8A0F201A3D6624007709EB /* LaunchScreen.xib */; };
 		EB8A0F2E1A3D6625007709EB /* LemonadeStandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8A0F2D1A3D6625007709EB /* LemonadeStandTests.swift */; };
+		EB8A0F381A3D7A7E007709EB /* Supplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8A0F371A3D7A7E007709EB /* Supplies.swift */; };
+		EB8A0F3A1A3D7BC2007709EB /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8A0F391A3D7BC2007709EB /* Price.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		EB8A0F271A3D6625007709EB /* LemonadeStandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemonadeStandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8A0F2C1A3D6625007709EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB8A0F2D1A3D6625007709EB /* LemonadeStandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonadeStandTests.swift; sourceTree = "<group>"; };
+		EB8A0F371A3D7A7E007709EB /* Supplies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supplies.swift; sourceTree = "<group>"; };
+		EB8A0F391A3D7BC2007709EB /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				EB8A0F1E1A3D6624007709EB /* Images.xcassets */,
 				EB8A0F201A3D6624007709EB /* LaunchScreen.xib */,
 				EB8A0F151A3D6624007709EB /* Supporting Files */,
+				EB8A0F3B1A3D7C04007709EB /* Models */,
 			);
 			path = LemonadeStand;
 			sourceTree = "<group>";
@@ -110,6 +115,15 @@
 				EB8A0F2C1A3D6625007709EB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB8A0F3B1A3D7C04007709EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB8A0F371A3D7A7E007709EB /* Supplies.swift */,
+				EB8A0F391A3D7BC2007709EB /* Price.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB8A0F1A1A3D6624007709EB /* ViewController.swift in Sources */,
+				EB8A0F3A1A3D7BC2007709EB /* Price.swift in Sources */,
+				EB8A0F381A3D7A7E007709EB /* Supplies.swift in Sources */,
 				EB8A0F181A3D6624007709EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
