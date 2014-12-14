@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var lemonSupplyCount: UILabel!
     @IBOutlet weak var iceCubeSupplyCount: UILabel!
     
-    
     @IBOutlet weak var lemonPurchaseCount: UILabel!
     @IBOutlet weak var iceCubePurchaseCount: UILabel!
     
@@ -31,6 +30,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateNameView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
     
     @IBAction func unpurchaseIceCubeButtonPressed(sender: AnyObject) {
     }
+    
     
     @IBAction func mixLemonButtonPressed(sender: AnyObject) {
     }
